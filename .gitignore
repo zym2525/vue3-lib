@@ -11,11 +11,7 @@ node_modules
 # Bundle
 dist
 coverage
-packages/element-plus/version.ts
 
 # local env files
 *.local
 .eslintcache
-cypress/screenshots/*
-cypress/videos/*
-tmp
