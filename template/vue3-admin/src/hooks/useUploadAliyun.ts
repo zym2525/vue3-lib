@@ -23,7 +23,7 @@ export type SourceType = {
 }
 
 const Credentials = {
-  AccessKeyId: '',
+  AccessKeyId: '1',
   AccessKeySecret: '',
 }
 
