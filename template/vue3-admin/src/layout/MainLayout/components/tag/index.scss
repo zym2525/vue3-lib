@@ -1,0 +1,277 @@
+/* stylelint-disable-next-line keyframes-name-pattern */
+@keyframes scheduleInWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* stylelint-disable-next-line keyframes-name-pattern */
+@keyframes scheduleOutWidth {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes close {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(0, -50%);
+  }
+}
+.tags-view {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+  color: var(--el-text-color-regular);
+  background: #ffffff;
+  box-shadow: 0 0 1px #888888;
+  .scroll-item {
+    position: relative;
+    display: inline-block;
+    margin-right: 4px;
+    padding: 0 6px;
+    height: 28px;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 0 1px #888888;
+    transition: all 0.4s;
+    line-height: 28px;
+    cursor: pointer;
+    .el-icon-close {
+      position: absolute;
+      top: 50%;
+      font-size: 10px;
+      color: var(--el-color-primary);
+      transition: font-size 0.2s;
+      cursor: pointer;
+      transform: translate(-50%, -50%);
+      &:hover {
+        font-size: 13px;
+        border-radius: 50%;
+        color: #ffffff;
+        background: #b4bccc;
+      }
+    }
+    &.is-closable:not(:first-child) {
+      &:hover {
+        padding-right: 18px;
+        &:not(.is-active) {
+          .el-icon-close {
+            animation: close 200ms ease-in forwards;
+          }
+        }
+      }
+    }
+  }
+  a {
+    padding: 0 4px;
+    text-decoration: none;
+    color: #666666;
+  }
+  .scroll-container {
+    position: relative;
+    overflow: hidden;
+    padding: 5px 0;
+    white-space: nowrap;
+    flex: 1;
+    .tab {
+      position: relative;
+      float: left;
+      overflow: visible;
+      white-space: nowrap;
+      list-style: none;
+      transition: transform 0.5s ease-in-out;
+      .scroll-item {
+        transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+        &:nth-child(1) {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  .right-button {
+    display: flex;
+    font-size: 16px;
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 38px;
+      border-right: 1px solid #cccccc;
+      cursor: pointer;
+    }
+  }
+
+  /* 右键菜单 */
+  .contextmenu {
+    position: absolute;
+    margin: 0;
+    padding: 5px 0;
+    font-size: 13px;
+    font-weight: normal;
+    border-radius: 4px;
+    white-space: nowrap;
+    color: #000000d9;
+    background: #ffffff;
+    outline: 0;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+    list-style-type: none;
+    li {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 7px 12px;
+      width: 100%;
+      cursor: pointer;
+      &:hover {
+        color: var(--el-color-primary);
+        background: var(--el-color-primary-light-9);
+      }
+      svg {
+        display: block;
+        margin-right: 0.5em;
+      }
+    }
+  }
+}
+.el-dropdown-menu {
+  padding: 0;
+  li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    cursor: pointer;
+    svg {
+      display: block;
+      margin-right: 0.5em;
+    }
+  }
+}
+.el-dropdown-menu__item:not(.is-disabled):hover {
+  color: #606266;
+  background: #f0f0f0;
+}
+:deep(.el-dropdown-menu__item) i {
+  margin-right: 10px;
+}
+.el-dropdown-menu__item--divided::before {
+  margin: 0;
+}
+.el-dropdown-menu__item.is-disabled {
+  cursor: not-allowed;
+}
+.scroll-item.is-active {
+  position: relative;
+  color: #ffffff;
+  background-color: var(--el-color-primary-light-9);
+  &:not(:first-child) {
+    padding-right: 18px;
+  }
+  .el-icon-close {
+    transform: translate(0, -50%);
+  }
+  a {
+    color: var(--el-color-primary);
+  }
+}
+.arrow-left,
+.arrow-right {
+  position: relative;
+  width: 40px;
+  height: 38px;
+  color: #00000073;
+  svg {
+    position: absolute;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, 50%);
+  }
+}
+.arrow-left {
+  box-shadow: 5px 0 5px -6px #cccccc;
+  &:hover {
+    cursor: w-resize;
+  }
+}
+.arrow-right {
+  border-right: 1px solid #cccccc;
+  box-shadow: -5px 0 5px -6px #cccccc;
+  &:hover {
+    cursor: e-resize;
+  }
+}
+
+/* 卡片模式下鼠标移入显示蓝色边框 */
+.card-in {
+  color: var(--el-color-primary);
+  a {
+    color: var(--el-color-primary);
+  }
+}
+
+/* 卡片模式下鼠标移出隐藏蓝色边框 */
+.card-out {
+  border: none;
+  color: #666666;
+  a {
+    color: #666666;
+  }
+}
+
+/* 灵动模式 */
+.schedule-active {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--el-color-primary);
+}
+
+/* 灵动模式下鼠标移入显示蓝色进度条 */
+.schedule-in {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--el-color-primary);
+  animation: scheduleInWidth 400ms ease-in;
+}
+
+/* 灵动模式下鼠标移出隐藏蓝色进度条 */
+.schedule-out {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--el-color-primary);
+  animation: scheduleOutWidth 400ms ease-in;
+}
+
+/* 刷新按钮动画效果 */
+.refresh-button {
+  animation: rotate 600ms linear infinite;
+}

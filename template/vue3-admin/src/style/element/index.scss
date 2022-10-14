@@ -1,0 +1,14 @@
+@use "../theme.scss" as *;
+
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+    $colors: (
+        "primary": (
+            "base": $color-primary,
+        ),
+    ),
+    $text-color: (
+        "primary": $color-text-primary,
+    )
+);
+
+@use "element-plus/theme-chalk/src/index.scss" as *;

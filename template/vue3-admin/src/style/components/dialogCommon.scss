@@ -1,0 +1,41 @@
+:deep(.el-dialog) {
+  padding: 10px;
+  min-width: 700px;
+  background: #dddddd;
+  .el-dialog__header {
+    padding: 10px 20px;
+    border-bottom: 1px solid #d3d3d3;
+    background: #ffffff;
+  }
+  .el-dialog__body {
+    padding: 0;
+    background: #ffffff;
+    .content-wrapper {
+      padding: 0 20px;
+    }
+    .btn-wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 13px 0 35px;
+      .el-button {
+        min-width: 85px;
+        border-radius: 5px;
+        color: #ffffff;
+        box-shadow: 0 4px 7px 0 rgb(109 111 113 / 46%);
+        & + .el-button {
+          margin-left: 45px;
+        }
+      }
+      .btn-cancle {
+        color: #333333;
+        background: #ffffff;
+        &:hover {
+          border-color: #ffffff;
+        }
+        &:active {
+          border-color: #ffffff;
+        }
+      }
+    }
+  }
+}

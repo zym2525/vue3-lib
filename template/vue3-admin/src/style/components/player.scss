@@ -1,0 +1,52 @@
+.player-wrapper {
+  display: inline-block;
+  width: 260px;
+  height: 146px;
+  &.perview-video-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  :deep(.video-js) {
+    .vjs-big-play-button {
+      top: 50%;
+      left: 50%;
+      margin-top: -0.8em;
+      margin-left: -1.5em;
+      width: 3em;
+      height: 1.6em;
+    }
+    &:hover .vjs-big-play-button,
+    .vjs-big-play-button:focus,
+    .vjs-big-play-button:active {
+      background-color: rgb(255 255 255 / 45%);
+    }
+    .vjs-play-progress::before {
+      top: -0.55em;
+    }
+    .vjs-control-bar {
+      font-size: 10px;
+      .vjs-mute-control {
+        padding: 0;
+        .vjs-icon-placeholder::before {
+          font-size: 1em;
+          line-height: 2;
+          color: #dddddd;
+        }
+      }
+      .vjs-volume-bar.vjs-slider-horizontal {
+        width: 4em;
+        height: 0.2em;
+        .vjs-volume-level {
+          height: 0.2em;
+          &::before {
+            top: -0.6em;
+            font-size: 0.8em;
+          }
+        }
+      }
+      .vjs-volume-bar {
+        margin: 1em 0.45em;
+      }
+    }
+  }
+}

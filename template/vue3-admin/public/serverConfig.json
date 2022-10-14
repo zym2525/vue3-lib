@@ -1,0 +1,18 @@
+{
+  "Version": "1.0",
+  "Title": "人力资源协会",
+  "SubTitle": "后台管理",
+  "FixedHeader": true,
+  "HiddenSideBar": false,
+  "MultiTagsCache": false,
+  "KeepAlive": true,
+  "Layout": "vertical",
+  "HideTabs": false,
+  "ShowLogo": true,
+  "ShowModel": "smart",
+
+  
+  "EpTheme": "default",
+  "EpThemeColor": "#409EFF"
+}
+

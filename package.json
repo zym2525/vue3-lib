@@ -1,0 +1,39 @@
+{
+  "name": "bole-core",
+  "packageManager": "pnpm@7.13.3",
+  "workspaces": [
+    "packages/*",
+    "docs",
+    "template/*"
+  ],
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "docs:dev": "pnpm run -C docs docs:dev"
+  },
+  "dependencies": {
+    "@bole-core/components": "workspace:*",
+    "@bole-core/constants": "workspace:*",
+    "@bole-core/utils": "workspace:*",
+    "@bole-core/core": "workspace:*"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.8.4",
+    "vitepress": "1.0.0-alpha.19",
+    "vuepress": "^1.9.7"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "vite",
+        "react",
+        "react-dom"
+      ]
+    }
+  }
+}

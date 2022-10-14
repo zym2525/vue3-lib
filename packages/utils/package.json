@@ -1,0 +1,16 @@
+{
+  "name": "@bole-core/utils",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "main": "index.ts",
+  "peerDependencies": {
+    "vue": "*"
+  },
+  "dependencies": {
+    "ali-oss": "^6.17.1"
+  },
+  "devDependencies": {
+    "@types/ali-oss": "^6.16.5"
+  }
+}

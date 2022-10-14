@@ -1,0 +1,7 @@
+/* 改变主题色变量 */
+$color-primary: red;
+$color-text-primary: #303133;
+
+:export {
+    primary: $color-primary
+  }

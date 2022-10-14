@@ -1,0 +1,30 @@
+{
+  "name": "@bole/docs",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vuepress dev .",
+    "build": "vuepress build .",
+    "docs:dev": "vitepress dev ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.8.4",
+    "vitepress": "1.0.0-alpha.19",
+    "vuepress": "^1.9.7"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "vite",
+        "react",
+        "react-dom"
+      ]
+    }
+  }
+}

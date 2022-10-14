@@ -1,0 +1,122 @@
+@use "./function.scss" as *;
+
+@mixin utils-user-select($value) {
+    -moz-user-select: $value;
+    -webkit-user-select: $value;
+    -ms-user-select: $value;
+}
+
+@mixin utils-clearfix {
+    $selector: &;
+
+    @at-root {
+        #{$selector}::before,
+        #{$selector}::after {
+            display: table;
+            content: "";
+        }
+        #{$selector}::after {
+            clear: both;
+        }
+    }
+}
+
+@mixin utils-vertical-center {
+    $selector: &;
+
+    @at-root {
+        #{$selector}::after {
+            display: inline-block;
+            content: "";
+            height: 100%;
+            vertical-align: middle;
+        }
+    }
+}
+
+@mixin utils-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin utils-selected {
+    box-sizing: border-box;
+    &:after {
+        content: "";
+        display: none;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        border: 1px solid getCssVar("color-primary");
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        pointer-events: none;
+    }
+}
+
+@mixin utils-hover-selected {
+    @include utils-selected;
+    &:not(.noHover):hover:after {
+        display: block;
+    }
+}
+@mixin utils-active-selected {
+    @include utils-selected;
+    &.selected:after {
+        display: block;
+    }
+}
+
+@mixin utils-shadow {
+    box-shadow: getCssVar("box-shadow", "lighter");
+}
+
+@mixin utils-hover-shadow {
+    &:hover {
+        @include utils-shadow;
+    }
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin scrollBar {
+    &::-webkit-scrollbar-track-piece {
+        background: #d3dce6;
+    }
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        background: #99a9bf;
+    }
+}
+
+@mixin relative {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin ellipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin multi-ellipsis($lines) {
+    // display: box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+}

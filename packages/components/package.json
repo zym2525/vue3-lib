@@ -1,0 +1,11 @@
+{
+  "name": "@bole-core/components",
+  "version": "0.0.1",
+  "description": "all components are settled here",
+  "main": "index.ts",
+  "module": "index.ts",
+  "unpkg": "index.js",
+  "peerDependencies": {
+    "vue": "*"
+  }
+}

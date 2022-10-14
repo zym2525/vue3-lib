@@ -1,0 +1,29 @@
+.query-btn-wrapper {
+  align-self: flex-end;
+  display: flex;
+  margin-bottom: 10px;
+}
+.filter-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 10px 0;
+  .el-input {
+    width: 190px;
+  }
+  .filter-list {
+    /* flex: 1; */
+    display: flex;
+    flex-wrap: wrap;
+    &-item {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .search-btn-wrapper {
+      margin-bottom: 10px;
+      // >.el-button {
+      //   margin-bottom: 10px;
+      // }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "@bole-core/hooks",
+  "private": true,
+  "license": "MIT",
+  "main": "index.ts",
+  "version": "0.0.1"
+}
